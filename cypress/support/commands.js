@@ -37,15 +37,15 @@ Cypress.Commands.add('login', () => {
 
 
 // SEM O FAKER
-
+//inserir dados para login
 Cypress.Commands.add('login', () => {
-    cy.visit('https://comercialhml.drcash.com.br/').then(() => {
+    cy.visit().then(() => {
       // Esperar até que a URL mude para indicar que a página foi carregada
       cy.url().should('not.eq', 'about:blank');
     });
   
-    cy.get('#inputEmailLogin').type('comercialadmin@drcash.com.br');
-    cy.get('#inputPasswordLogin').type('drcash22!');
+    cy.get('#inputEmailLogin').type();
+    cy.get('#inputPasswordLogin').type();
     cy.get('#buttonSubmitFormLogin').click();
   });
    
